@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Reckoning Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+    </style>
+</head>
+<body class="body">
+    <button class="lose" onclick="ReNew()" 
+        style="position: fixed; top: 10px; left: 10px; z-index: 100;">
+    </button>
+    <div id="main-menu">
+        <h1>The Reckoning Game</h1>
+        <button class="menu-btn" onclick="showCharacterSelect()">New Game</button>
+        <button class="menu-btn" id="continue-btn" style="display: none;" onclick="continueGame()">Continue</button>
+    </div>
+
+    <div id="character-selection" style="display: none;">
+        <div class="character-card" onclick="selectCharacter('elon')">
+            <h2>Elon</h2>
+            <img src="img/elon.jpeg" width="150" alt="Elon" height="200px">
+            <p>Tech mogul on the brink of collapse</p>
+        </div>
+        <div class="character-card" onclick="selectCharacter('jeff')">
+            <h2>Jeff</h2>
+            <img src="img/jeff.jpeg" width="150" alt="Jeff">
+            <p>Billionaire turned survivalist</p>
+        </div>
+        <div class="character-card" onclick="selectCharacter('bill')">
+            <h2>Bill</h2>
+            <img src="img/bill.jpg" width="150" alt="Bill">
+            <p>Philanthropist facing his darkest fears</p>
+        </div>
+        <div class="character-card" onclick="selectCharacter('mark')">
+            <h2>Mark</h2>
+            <img src="img/mark.png" width="150" alt="Mark">
+            <p>Social media king in an unknown realm</p>
+        </div>
+    </div>
+
+    <div id="story-container" style="display: none;">
+        <div id="story-text"></div>
+        <button class="menu-btn" onclick="progressStory()">Next</button>
+    </div>
+
+    <div id="game-container" style="display: none;">
+        <iframe id="game-iframe" frameborder="0"></iframe>
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>

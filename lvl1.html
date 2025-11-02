@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/lvl1.css">
+        <title>Flip Coin</title>      
+    </head>
+    <body>
+        <button id="autobtn">Next</button>
+        <button id="backbtn">Fail</button>
+
+        <div class="container">
+            <div class="score">
+                <div class="playerScore">Player: 0</div>
+                <div class="botScore">Villain: 0</div>
+            </div>
+            <div class="coinSpace">
+                <div class="headCoin">
+                    <img src="img/heads.png" />
+                </div>
+                <div class="tailsCoin">
+                    <img src="img/tails.png" />
+                </div>
+            </div>
+            <h3>Select side:</h3>
+            <div class="chooseCoin">
+                <button class="chooseBtn" id="heads">Heads</button>
+                <button class="chooseBtn" id="tails">Tails</button>
+            </div>
+
+            <div class="btnSpace">
+                <button disabled id="flipBtn">Flip the coin</button>
+            </div>
+        </div>
+
+
+        <script src="js/lvl1.js"></script>
+    </body>
+</html>

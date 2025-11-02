@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cursed Quiz</title>
+    <link rel="stylesheet" href="css/lvl5.css">
+</head>
+<body>
+
+    <audio id="horrorMusic" loop>
+        <source src="https://www.fesliyanstudios.com/play-mp3/4389" type="audio/mpeg">
+    </audio>
+
+    <button id="autobtn"></button>
+    <div class="game-container">
+        <h1>The Cursed Quiz</h1>
+        <p id="level-info">Level 1</p>
+        <p id="question">Loading cursed question...</p>
+        <input type="text" id="answer" placeholder="Enter your answer..." />
+        <button onclick="submitAnswer()">Submit Answer</button>
+        <div id="feedback" class="feedback"></div>
+    </div>
+
+    <img class="screamer" id="screamer" src="img/download.png" alt="">
+
+
+    <script src="js/lvl5.js"></script>
+</body>
+</html>

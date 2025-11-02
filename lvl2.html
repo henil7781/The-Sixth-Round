@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe vs Computer</title>
+  <link rel="stylesheet" href="css/lvl2.css">
+  <!-- <link href="img/tic-tac-toe.png"> -->
+  <audio id="win">
+    <source src="assets_sound_winsound.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="tie">
+    <source src="assets_sound_gametie.mp3" type="audio/mpeg">
+  </audio>
+</head>
+<body>
+  <button id="autobtn"></button>
+  <div class="parent">
+    <h1 class="title">Player vs Villain</h1>
+    
+    <div class="playground">
+      <!-- Keep the same 3x3 grid structure -->
+      <button class="box" id="box1" onclick="box(1)"></button>
+      <button class="box" id="box2" onclick="box(2)"></button>
+      <button class="box" id="box3" onclick="box(3)"></button>
+      <button class="box" id="box4" onclick="box(4)"></button>
+      <button class="box" id="box5" onclick="box(5)"></button>
+      <button class="box" id="box6" onclick="box(6)"></button>
+      <button class="box" id="box7" onclick="box(7)"></button>
+      <button class="box" id="box8" onclick="box(8)"></button>
+      <button class="box" id="box9" onclick="box(9)"></button>
+    </div>
+    
+    <div class="btn-container">
+      <!-- Keep undo and reset buttons -->
+      <button type="button" class="feature-btn" title="Undo" onclick="undoMove()">
+        <!-- SVG icon -->
+      </button>
+      <button type="button" class="feature-btn" title="Reset" onclick="resetGame()">
+        <!-- SVG icon -->
+      </button>
+    </div>
+    
+    <h1 id="result">Your Turn</h1>
+  
+    <div class="container">
+      <button type="button" class="btn" onclick="openPopup()">Rules</button>
+    </div>
+
+    <div class="popup" id="popup">
+      <h2>Rules:</h2>
+      <ol>
+        <li>The game is played on a grid that's 3 squares by 3 squares.</li>
+        <li>
+          You are X and the computer is O. You take turns putting your
+          marks in empty squares.
+        </li>
+        <li>
+          The first to get 3 marks in a row (up, down, across, or diagonally) loses.
+        </li>
+        <li>
+          When all 9 squares are full, the game ends in a tie if no player has 3 in a row.
+        </li>
+      </ol>
+      <button type="button" onclick="closePopup()">OK</button>
+    </div>
+  </div>
+
+
+  <script src="js/lvl2.js"></script>
+</body>
+</html>

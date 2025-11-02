@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations!</title>
+    <style>
+        body {
+            text-align: center;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .message {
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            margin-top: 20vh;
+            animation: pop 1s ease-in-out infinite alternate;
+        }
+        @keyframes pop {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: gold;
+            opacity: 0.7;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(0vh) translateX(0vw); }
+            100% { transform: translateY(100vh) translateX(10vw); }
+        }
+
+
+        /* Modern Button */
+.stylish-button {
+    background: linear-gradient(45deg, #007bff, #00d4ff); /* Blue gradient */
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+/* Hover Effect */
+.stylish-button:hover {
+    background: linear-gradient(45deg, #00d4ff, #007bff);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Click (Active) Effect */
+.stylish-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+}
+
+    </style>
+</head>
+<body>
+    <h1 class="message">🎉 Congratulations! 🎉<br>You Win the Prize of $200 Billion! 💰</h1>
+
+    <button onclick="ReNew()" class="stylish-button">Finish</button>
+    <script>
+        function createConfetti() {
+            for (let i = 0; i < 100; i++) {
+                let confetti = document.createElement("div");
+                confetti.className = "confetti";
+                confetti.style.left = Math.random() * 100 + "vw";
+                confetti.style.top = Math.random() * -10 + "vh";
+                confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
+                document.body.appendChild(confetti);
+                setTimeout(() => confetti.remove(), 5000);
+            }
+        }
+        setInterval(createConfetti, 500);
+
+        function ReNew() {
+            localStorage.removeItem("gameState");
+            window.location.href = 'main.html';
+        }
+    </script>
+</body>
+</html>
